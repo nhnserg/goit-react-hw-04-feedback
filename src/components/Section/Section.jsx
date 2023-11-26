@@ -1,17 +1,13 @@
-import { Component } from 'react';
-import styles from './Section.module.css'
+import React from 'react';
+import styles from './Section.module.css';
 
-class Section extends Component {
-    render() {
-        const { title, children } = this.props;
+const Section = ({ title, children }) => {
+    return (
+        <div className={styles.section}>
+            <h2>{title}</h2>
+            {children}
+        </div>
+    );
+};
 
-        return (
-            <div className={styles.section}>
-                <h2>{title}</h2>
-                {children}
-            </div>
-        );
-    }
-}
-
-export default Section
+export default Section;
